@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CocktailBar</string>
+    <string name="my_cocktails">My cocktails</string>
+    <string name="add_here">Add your first cocktail here</string>
+    <string name="add_new_cocktail">Add new cocktail</string>
+    <string name="cocktail_image">Cocktail image</string>
+    <string name="add_cocktail_image">Here you can add cocktail image</string>
+    <string name="cocktail_name">Cocktail name</string>
+    <string name="add_title">Add title</string>
+    <string name="description_hint">Description</string>
+    <string name="optional_field">Optional field</string>
+    <string name="recipe_hint">Recipe</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="lower_arrow">Button for addition is lower</string>
+    <string name="title_hint">Title</string>
+    <string name="add_new_ingredient">Add new ingredient</string>
+</resources>
