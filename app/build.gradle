@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace 'com.example.cocktailbar'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.cocktailbar"
@@ -35,6 +35,13 @@ android {
     buildFeatures {
         viewBinding true
     }
+    sourceSets {
+        main {
+            assets {
+                srcDirs 'src\\main\\assets'
+            }
+        }
+    }
 }
 
 dependencies {
@@ -45,8 +52,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     //Navigation
-    implementation "androidx.navigation:navigation-fragment-ktx:2.5.2"
-    implementation "androidx.navigation:navigation-ui-ktx:2.5.2"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.7.0"
+    implementation "androidx.navigation:navigation-ui-ktx:2.7.0"
     implementation "androidx.fragment:fragment-ktx:1.6.1"
 
     // Lifecycle

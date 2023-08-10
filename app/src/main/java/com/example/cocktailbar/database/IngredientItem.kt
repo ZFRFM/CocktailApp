@@ -1,4 +1,4 @@
-package com.example.cocktailbar.data
+package com.example.cocktailbar.database
 
 data class IngredientItem(
     val name: String

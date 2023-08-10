@@ -1,11 +1,11 @@
-package com.example.cocktailbar.data
+package com.example.cocktailbar.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [CocktailItem::class], version = 1, exportSchema = false)
+@Database(entities = [CocktailItem::class], version = 1)
 abstract class CocktailsItemRoomDatabase: RoomDatabase() {
 
     abstract fun cocktailItemDao(): CocktailItemDao

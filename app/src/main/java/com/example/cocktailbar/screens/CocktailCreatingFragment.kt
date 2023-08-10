@@ -6,15 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.example.cocktailbar.CocktailApplication
 import com.example.cocktailbar.CocktailViewModel
 import com.example.cocktailbar.CocktailViewModelFactory
-import com.example.cocktailbar.data.CocktailItem
-import com.example.cocktailbar.data.CocktailItemDao
+import com.example.cocktailbar.database.CocktailItem
 import com.example.cocktailbar.databinding.FragmentCocktailCreatingBinding
-import com.example.cocktailbar.databinding.FragmentMyCocktailsBinding
 
 class CocktailCreatingFragment : Fragment() {
 
