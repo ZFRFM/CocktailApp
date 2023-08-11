@@ -6,12 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.coroutineScope
 import com.example.cocktailbar.CocktailApplication
 import com.example.cocktailbar.CocktailViewModel
 import com.example.cocktailbar.CocktailViewModelFactory
 import com.example.cocktailbar.R
 import com.example.cocktailbar.databinding.FragmentCocktailDetailsBinding
 import com.example.cocktailbar.databinding.FragmentMyCocktailsBinding
+import kotlinx.coroutines.launch
 
 class CocktailDetailsFragment : Fragment() {
 
@@ -32,6 +34,15 @@ class CocktailDetailsFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        lifecycle.coroutineScope.launch {
+            viewModel.getCocktailItem(id = id).collect() {
+                viewModel.getCocktailItem(id)
+            }
+        }
+    }
 
 
 }

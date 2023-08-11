@@ -2,12 +2,14 @@ package com.example.cocktailbar.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cocktailbar.R
 import com.example.cocktailbar.database.CocktailItem
 import com.example.cocktailbar.databinding.ItemViewBinding
+import kotlinx.coroutines.flow.Flow
 
 class MyCocktailsAdapter(private val onItemClicked: (CocktailItem) -> Unit)
     : ListAdapter<CocktailItem, MyCocktailsAdapter.MyCocktailViewHolder>(DiffCallback) {
@@ -36,6 +38,7 @@ class MyCocktailsAdapter(private val onItemClicked: (CocktailItem) -> Unit)
     }
 
     override fun onBindViewHolder(holder: MyCocktailViewHolder, position: Int) {
+        holder.itemView.findViewById<TextView>(R.id.item_textView).text = "myCocktailsList[position].title"
         holder.bind(getItem(position))
     }
 
@@ -50,5 +53,4 @@ class MyCocktailsAdapter(private val onItemClicked: (CocktailItem) -> Unit)
             }
         }
     }
-
 }

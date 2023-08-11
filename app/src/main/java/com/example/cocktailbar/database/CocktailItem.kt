@@ -13,7 +13,7 @@ data class CocktailItem(
     @ColumnInfo(name = "description")
     val description: String = "",
     @ColumnInfo(name = "ingredients")
-    val ingredients: MutableList<IngredientItem>,
+    val ingredients: String,
     @ColumnInfo(name = "recipe")
     val recipe: String = ""
 )
