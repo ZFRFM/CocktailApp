@@ -1,4 +1,4 @@
-package com.example.cocktailbar.database
+package com.example.cocktailbar.data
 
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow

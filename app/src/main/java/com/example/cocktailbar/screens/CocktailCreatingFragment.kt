@@ -7,9 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.example.cocktailbar.CocktailApplication
-import com.example.cocktailbar.CocktailViewModel
-import com.example.cocktailbar.CocktailViewModelFactory
-import com.example.cocktailbar.database.CocktailItem
+import com.example.cocktailbar.data.CocktailItem
 import com.example.cocktailbar.databinding.FragmentCocktailCreatingBinding
 
 class CocktailCreatingFragment : Fragment() {
@@ -43,7 +41,6 @@ class CocktailCreatingFragment : Fragment() {
         return viewModel.isEntryValid(
             binding.itemTitleEditText.toString(),
             binding.itemDescriptionEditText.toString(),
-            binding.ingredientRecyclerView,
             binding.itemRecipeEditText.toString()
         )
     }

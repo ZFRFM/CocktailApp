@@ -1,12 +1,9 @@
-package com.example.cocktailbar
+package com.example.cocktailbar.screens
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.asLiveData
-import androidx.recyclerview.widget.RecyclerView
-import com.example.cocktailbar.database.CocktailItem
-import com.example.cocktailbar.database.CocktailItemDao
+import com.example.cocktailbar.data.CocktailItem
+import com.example.cocktailbar.data.CocktailItemDao
 import kotlinx.coroutines.flow.Flow
 
 class CocktailViewModel(private val itemDao: CocktailItemDao): ViewModel() {
@@ -14,7 +11,7 @@ class CocktailViewModel(private val itemDao: CocktailItemDao): ViewModel() {
     fun getCocktailItemsList(): Flow<List<CocktailItem>> = itemDao.getCocktailItems()
     fun getCocktailItem(id: Int): Flow<CocktailItem> = itemDao.getItem(id)
 
-    fun isEntryValid(title: String, description: String, ingredients: RecyclerView, recipe: String): Boolean {
+    fun isEntryValid(title: String, description: String, recipe: String): Boolean {
         if (title.isBlank()) {
             return false
         }

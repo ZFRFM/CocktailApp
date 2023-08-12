@@ -1,4 +1,4 @@
-package com.example.cocktailbar.database
+package com.example.cocktailbar.data
 
 import android.content.Context
 import androidx.room.Database

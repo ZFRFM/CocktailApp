@@ -30,6 +30,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"
+            app:helperText="@string/add_title"
+            app:expandedHintEnabled="false"
             android:hint="@string/title_hint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,95 +47,51 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/add_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/add_title"
-            app:layout_constraintStart_toStartOf="@id/item_title"
-            app:layout_constraintTop_toBottomOf="@id/item_title"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="12dp" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/item_description"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="16dp"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"
+            app:helperText="@string/optional_field"
+            app:expandedHintEnabled="false"
             android:hint="@string/description_hint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/add_title">
+            app:layout_constraintTop_toBottomOf="@id/item_title">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/item_description_editText"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="140dp"
                 android:inputType="textAutoComplete|textCapWords"
                 android:singleLine="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/add_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/optional_field"
-            app:layout_constraintStart_toStartOf="@id/item_description"
-            app:layout_constraintTop_toBottomOf="@id/item_description"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="12dp" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/ingredient_recyclerView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@id/add_description"
-            app:layout_constraintStart_toStartOf="@id/item_description" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_cocktail_creating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/blue"
-            android:src="@drawable/fab_add_small_img"
-            android:visibility="gone"
-            android:layout_marginStart="20dp"
-            app:layout_constraintStart_toEndOf="@id/ingredient_recyclerView"
-            app:layout_constraintBottom_toBottomOf="@id/ingredient_recyclerView"
-            android:contentDescription="@string/add_new_ingredient" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/item_recipe"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="16dp"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"
+            app:helperText="@string/optional_field"
+            app:expandedHintEnabled="false"
             android:hint="@string/recipe_hint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ingredient_recyclerView">
+            app:layout_constraintTop_toBottomOf="@+id/item_description">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/item_recipe_editText"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="140dp"
                 android:inputType="textAutoComplete|textCapWords"
                 android:singleLine="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/add_recipe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/item_recipe"
-            app:layout_constraintStart_toStartOf="@+id/item_recipe"
-            android:text="@string/optional_field"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="12dp" />
 
         <Button
             android:id="@+id/save_button"
@@ -141,7 +100,7 @@
             android:text="@string/save_button"
             android:backgroundTint="@color/blue"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@id/add_recipe"
+            app:layout_constraintTop_toBottomOf="@id/item_recipe"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

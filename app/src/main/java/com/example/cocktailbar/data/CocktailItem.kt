@@ -1,4 +1,4 @@
-package com.example.cocktailbar.database
+package com.example.cocktailbar.data
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -12,8 +12,6 @@ data class CocktailItem(
     val title: String,
     @ColumnInfo(name = "description")
     val description: String = "",
-    @ColumnInfo(name = "ingredients")
-    val ingredients: String,
     @ColumnInfo(name = "recipe")
     val recipe: String = ""
 )

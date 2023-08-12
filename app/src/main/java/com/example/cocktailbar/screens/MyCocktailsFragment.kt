@@ -11,16 +11,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cocktailbar.CocktailApplication
-import com.example.cocktailbar.CocktailViewModel
-import com.example.cocktailbar.CocktailViewModelFactory
 import com.example.cocktailbar.R
 import com.example.cocktailbar.adapters.MyCocktailsAdapter
-import com.example.cocktailbar.database.CocktailItem
 import com.example.cocktailbar.databinding.FragmentMyCocktailsBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.flow.FlowCollector
-import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch
 
 class MyCocktailsFragment : Fragment() {

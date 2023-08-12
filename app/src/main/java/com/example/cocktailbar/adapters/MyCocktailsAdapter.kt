@@ -7,9 +7,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cocktailbar.R
-import com.example.cocktailbar.database.CocktailItem
+import com.example.cocktailbar.data.CocktailItem
 import com.example.cocktailbar.databinding.ItemViewBinding
-import kotlinx.coroutines.flow.Flow
 
 class MyCocktailsAdapter(private val onItemClicked: (CocktailItem) -> Unit)
     : ListAdapter<CocktailItem, MyCocktailsAdapter.MyCocktailViewHolder>(DiffCallback) {
